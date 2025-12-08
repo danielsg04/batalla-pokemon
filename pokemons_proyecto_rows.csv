@@ -1,0 +1,12 @@
+id,created_at,nombre,tipo,fuerza,vida,vida_actual,img,gif1,gif2,estadoPokemon
+1,2025-11-04 08:33:58.216697+00,charizard,Fuego/Volador,84,185,78,./PNG/charizard.png,./GIF/jugador1/charizard.gif,./GIF/jugador2/charizard.gif,vivo
+2,2025-11-04 08:33:58.216697+00,blastoise,Agua,83,186,186,./PNG/blastoise.png,./GIF/jugador1/blastoise.gif,./GIF/jugador2/blastoise.gif,vivo
+3,2025-11-04 08:33:58.216697+00,venusaur,Planta/Veneno,82,187,187,./PNG/venusaur.png,./GIF/jugador1/venusaur.gif,./GIF/jugador2/venusaur.gif,vivo
+4,2025-11-04 08:33:58.216697+00,raichu,Eléctrico,90,167,167,./PNG/raichu.png,./GIF/jugador1/raichu.gif,./GIF/jugador2/raichu.gif,vivo
+5,2025-11-04 08:33:58.216697+00,mewtwo,Psíquico,110,213,213,./PNG/mewtwo.png,./GIF/jugador1/mewtwo.gif,./GIF/jugador2/mewtwo.gif,vivo
+6,2025-11-04 08:33:58.216697+00,gengar,Fantasma/Veneno,65,167,167,./PNG/gengar.png,./GIF/jugador1/gengar.gif,./GIF/jugador2/gengar.gif,vivo
+7,2025-11-04 08:33:58.216697+00,dragonite,Dragón/Volador,134,198,198,./PNG/dragonite.png,./GIF/jugador1/dragonite.gif,./GIF/jugador2/dragonite.gif,vivo
+8,2025-11-04 08:33:58.216697+00,snorlax,Normal,110,267,267,./PNG/snorlax.png,./GIF/jugador1/snorlax.gif,./GIF/jugador2/snorlax.gif,vivo
+9,2025-11-04 08:33:58.216697+00,machamp,Lucha,130,197,197,./PNG/machamp.png,./GIF/jugador1/machamp.gif,./GIF/jugador2/machamp.gif,vivo
+10,2025-11-04 08:33:58.216697+00,alakazam,Psíquico,90,162,162,./PNG/alakazam.png,./GIF/jugador1/alakazam.gif,./GIF/jugador2/alakazam.gif,vivo
+11,2025-11-04 08:33:58.216697+00,vaporeon,Agua,117,237,237,./PNG/vaporeon.png,./GIF/jugador1/vaporeon.gif,./GIF/jugador2/vaporeon.gif,vivo

@@ -1,0 +1,202 @@
+body  {
+  background-image: url('./PNG/FondoBatalla.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Primera parte */
+.jugador {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.caja-verde {
+  width: 400px;
+  height: 55px;
+  background-color: #C3F5AB;
+  border: 3px solid #0FAB0A;
+  border-radius: 10px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Segunda parte */
+.fotopokemon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.fotopokemon .parte-izquierda {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.fotopokemon .parte-derecha {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.pokeball-img1, .pokeball-img2 {
+  margin: 10px;
+  border: 5px solid red;
+  width: 70px;
+  height: 70px;
+  border-radius: 70px;
+}
+
+.fotopokemon img {
+  width: 70px;
+  height: 70px;
+  border-radius: 70px;
+}
+
+/* Tercera parte */
+.parte-jugador2,
+.parte-jugador1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* border: 1px solid black; */
+  margin: 30px;
+}
+
+.parte-jugador2 .info-pokemon,
+.parte-jugador1 .info-pokemon {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin:10px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-color: lightgray;
+  border: 2px solid black;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.parte-jugador2 .info-pokemon .parte-superior,
+.parte-jugador1 .info-pokemon .parte-superior {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  /* border: 1px solid black; */
+}
+
+.parte-jugador2 .info-pokemon .parte-inferior,
+.parte-jugador1 .info-pokemon .parte-inferior {
+  width: 380px;
+  height: 16px;
+  
+  /* border: 1px solid black; */
+}
+.parte-jugador2 .info-pokemon meter,
+.parte-jugador1 .info-pokemon meter {
+  width: 100%;
+  height: 25px;
+}
+
+/* Base con GIF encima */
+.parte-jugador1 .base-img, .parte-jugador2 .base-img {
+  position: relative;
+  width: 300px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid black; */
+}
+
+.parte-jugador1 .base-img .base, .parte-jugador2 .base-img .base {
+  position: absolute;
+  width: 100%;
+  top: 40px;  /* Ajusta la altura de la base */
+  z-index: 1;
+  /* border: 1px solid black; */
+}
+
+.parte-jugador1 .base-img .gif1, .parte-jugador2 .base-img .gif2 {
+  position: absolute;
+  bottom: 0px;   /* Ajusta la altura del Pokémon sobre la base */
+  width: 160px;
+  z-index: 2;
+  /* border: 1px solid black; */
+}
+
+/* Cuarta parte */
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px;
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+  border-radius: 10px;
+  background-color: lightgray;
+  border: 3px solid black;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.menu .menu-texto {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 100px;
+  padding-right: 100px;
+  border-radius: 10px;
+  font-size: 26px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-color: white;
+  border: 3px solid black;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.menu .menu-opciones {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  border: 3px solid black;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.menu .menu-opciones .menu-caja{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 600px;
+  margin: auto;
+}
+
+button {
+  width: 250px;
+  height: 50px;
+  margin: 10px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;  
+}
+
+button:hover {
+  transform: scale(1.05); /* Aumenta el tamaño un 5% con hover */
+}
+
+/* Colores para los botones */
+button.opcion1 {
+  border: 5px solid red;
+  background-color: lightcoral;
+}
+
+button.opcion2 {
+  border: 5px solid blue;
+  background-color: lightblue;
+}

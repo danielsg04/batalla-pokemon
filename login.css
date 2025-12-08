@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  background-image: url('./PNG/fondoLogin.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.login-container {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+h2 {
+  color: black;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+.caja-input {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #e1e5e9;
+  border-radius: 50px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.btn-login {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(45deg, #ff0000, #0000ff);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.btn-login:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(78, 205, 196, 0.4);
+}
