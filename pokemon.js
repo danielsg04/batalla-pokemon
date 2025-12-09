@@ -296,5 +296,3 @@ fetch(
     cambiarNombrePokemon(lista[3].nombre, 2);
   })
   .catch((err) => console.error(err));
-
-// AÑADIR OPCIÓN PARA ELEGIR POKEMON ANTES DE JUGAR
