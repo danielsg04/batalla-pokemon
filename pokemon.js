@@ -242,7 +242,7 @@ function ocultarPokeballs() {
   pokeballs.forEach((pokeball) => {
     if (!pokeball.classList.contains("pokemon-muerto")) {
       pokeball.style.opacity = "0.5";
-      pokeball.style.pointerEvents = "none"; // ❌ NO CLICABLE
+      pokeball.style.pointerEvents = "none"; // NO CLICABLE
     }
   });
 }
