@@ -5,7 +5,7 @@ Simulador web de batalla Pokémon por turnos para dos jugadores. Incluye pantall
 ## Demo
 
 <!-- Pon aquí el enlace de Netlify -->
-[https://TU-SITIO.netlify.app](https://batalla-pokemon-dsg.netlify.app)
+https://batalla-pokemon-dsg.netlify.app
 
 ## Características
 
