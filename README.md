@@ -4,7 +4,8 @@ Simulador web de batalla Pokémon por turnos para dos jugadores. Incluye pantall
 
 ## Demo
 
-- https://batalla-pokemon-dsg.netlify.app
+<!-- Pon aquí el enlace de Netlify -->
+https://TU-SITIO.netlify.app
 
 ## Características
 
@@ -66,7 +67,7 @@ Se usan tres tablas:
    values ('ash', 'pikachu123');
    ```
 
-4. Activa RLS y da permisos de lectura y escritura al rol `anon`:
+4. Activa RLS y crea las políticas de acceso para el rol `anon`:
 
    ```sql
    alter table public.pokemons_proyecto enable row level security;
@@ -79,14 +80,41 @@ Se usan tres tablas:
    create policy "anon lee partidas"  on public.partidas for select to anon using (true);
    create policy "anon actualiza partidas"
      on public.partidas for update to anon using (true) with check (true);
-
-   grant usage on schema public to anon;
-   grant select on public.pokemons_proyecto to anon;
-   grant select on public.usuarios_proyecto to anon;
-   grant select, insert, update on public.partidas to anon;
    ```
 
-5. En **Project Settings → Data API / API Keys** copia la *Project URL* y la clave **anon**, y ponlas al principio de `pokemon.js` y de `login.html`:
+5. Da permisos al rol `anon` (`GRANT`). Este paso es imprescindible: sin él la API devuelve el error `42501 permission denied`, aunque las políticas RLS estén bien creadas.
+
+   Supabase tiene dos capas de seguridad y hacen falta las dos:
+
+   - **`GRANT`**: define *qué operaciones* puede hacer un rol sobre una tabla.
+   - **RLS (políticas)**: define *qué filas* puede ver o modificar.
+
+   `anon` es el rol que usa la clave pública de la web, es decir, cualquier visitante que no ha iniciado sesión con Supabase Auth.
+
+   ```sql
+   -- Permite al rol anon entrar en el esquema public, donde están las tablas.
+   -- Sin esto no puede acceder a ninguna tabla de ese esquema.
+   grant usage on schema public to anon;
+
+   -- Catálogo de pokémon: SOLO LECTURA.
+   -- La web necesita leerlos para repartirlos, pero nadie puede
+   -- modificarlos ni borrarlos desde el navegador.
+   grant select on public.pokemons_proyecto to anon;
+
+   -- Partidas: leer, crear y actualizar.
+   --   select -> reanudar una partida guardada
+   --   insert -> crear una partida nueva al empezar
+   --   update -> guardar vida, turno, etc. tras cada acción
+   -- No se da "delete": nadie puede borrar partidas desde el navegador.
+   grant select, insert, update on public.partidas to anon;
+
+   -- Usuarios (login): SOLO LECTURA, para comprobar usuario y contraseña.
+   -- Aviso: con este método cualquiera con la clave pública puede leer
+   -- la tabla, por eso solo deben usarse contraseñas de prueba.
+   grant select on public.usuarios_proyecto to anon;
+   ```
+
+6. En **Project Settings → Data API / API Keys** copia la *Project URL* y la clave **anon**, y ponlas al principio de `pokemon.js` y de `login.html`:
 
    ```js
    const SUPABASE_URL = "https://TU-PROYECTO.supabase.co/rest/v1";
