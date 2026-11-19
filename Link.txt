@@ -1,0 +1,5 @@
+Daniel Salmerón González
+------------------------
+
+Link despliegue con Netlify:
+https://batalla-pokemon-dsg.netlify.app

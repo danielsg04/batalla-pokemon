@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batalla Pokemon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="jugador">
+            <div class="caja-verde">Jugador 1</div>
+            <div class="caja-verde">Jugador 2</div>
+        </div>
+        <div class="fotopokemon">
+            <div class="parte-izquierda">
+                <div class="pokeball-img1"></div>
+                <div class="pokeball-img1"></div>
+                <div class="pokeball-img1"></div>
+            </div>
+            <div class="parte-derecha">
+                <div class="pokeball-img2"></div>
+                <div class="pokeball-img2"></div>
+                <div class="pokeball-img2"></div>
+            </div>
+        </div>
+        <div class="parte-jugador2">
+            <div class="info-pokemon">
+                <div class="parte-superior">
+                    <div class="nombre-pokemon"></div>
+                    <div class="nivel-pokemon">Nv 50</div>
+                </div>
+                <div class="parte-inferior">
+                    <meter value="100" min="0" max="100" class="vida"></meter> <!-- Barra de vida -->
+                </div>
+            </div>
+            
+            <div class="base-img">
+                <img class="gif2" src="">
+                <img class="base" src="./PNG/BasePokemon.png">
+            </div>
+        </div>
+
+        <div class="parte-jugador1">
+            <div class="base-img">
+                <img class="gif1" src="">
+                <img class="base" src="./PNG/BasePokemon.png">
+            </div>
+            <div class="info-pokemon">
+                <div class="parte-superior">
+                    <div class="nombre-pokemon"></div>
+                    <div class="nivel-pokemon">Nv 50</div>
+                </div>
+                <div class="parte-inferior">
+                    <meter value="100" min="0" max="100" class="vida"></meter> <!-- Barra de vida -->
+                </div>
+            </div>
+        </div>
+
+        <div class="menu">
+            <div class="menu-texto"></div>
+            <div class="menu-opciones">
+                <div class="menu-caja">
+                    <button class="opcion1">Luchar</button>
+                    <button class="opcion2">Pokémon</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="pokemon.js"></script>
+</body>
+</html>

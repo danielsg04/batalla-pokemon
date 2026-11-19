@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    
+    <form id="loginForm">
+
+      <div class="caja-input">
+        <input type="text" id="usuario" placeholder="Usuario" required>
+      </div>
+      
+      <div class="caja-input">
+        <input type="password" id="password" placeholder="Contraseña" required>
+      </div>
+      
+      <button type="submit" class="btn-login">Entrar</button>
+    </form>
+  </div>
+
+  <script>
+<<<<<<< HEAD
+    const SUPABASE_URL = 'https://xmgxilvmonfuiasgehts.supabase.co/rest/v1';
+    const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhtZ3hpbHZtb25mdWlhc2dlaHRzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTUwMzg0MzQsImV4cCI6MjExMDYxNDQzNH0.Kq18qkkjznardTr31TFsNDXuFMfM0LMyS6qVFNqqwPo';
+
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const usuario = document.getElementById('usuario').value.trim();
+      const password = document.getElementById('password').value;
+
+      fetch(`${SUPABASE_URL}/usuarios_proyecto?usuario=eq.${encodeURIComponent(usuario)}`, {
+        method: 'GET',
+        headers: {
+          'apikey': SUPABASE_KEY,
+          'Authorization': 'Bearer ' + SUPABASE_KEY,
+          'Content-Type': 'application/json'
+        }
+      })
+      .then(response => {
+        if (!response.ok) throw new Error('Error ' + response.status);
+        return response.json();
+      })
+      .then(users => {
+        if (users.length > 0 && users[0].pass === password) {
+          sessionStorage.setItem('usuario', usuario);
+          window.location.href = 'pokemon.html';
+        } else {
+          alert('Usuario o contraseña incorrectos');
+        }
+      })
+      .catch(err => {
+        console.error(err);
+        alert('No se pudo conectar con el servidor. Revisa la consola.');
+=======
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const usuario = document.getElementById('usuario').value;
+      const password = document.getElementById('password').value;
+      
+      fetch(`https://hzzafnhgybxawflijuzx.supabase.co/rest/v1/usuarios_proyecto?usuario=eq.${usuario}`, {
+        method: 'GET',
+        headers: {
+          'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh6emFmbmhneWJ4YXdmbGlqdXp4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjIyMzY1MjIsImV4cCI6MjA3NzgxMjUyMn0.zyjXtJw0nbg4iWNk8Cmn4ZygPJUNC2oORJUv2S8Qz3E',
+          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh6emFmbmhneWJ4YXdmbGlqdXp4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjIyMzY1MjIsImV4cCI6MjA3NzgxMjUyMn0.zyjXtJw0nbg4iWNk8Cmn4ZygPJUNC2oORJUv2S8Qz3E',
+          'Content-Type': 'application/json'
+        }
+      })
+      .then(response => response.json())
+      .then(users => {
+        if (users.length > 0 && users[0].pass === password) {
+          window.location.href = 'pokemon.html';
+        }
+>>>>>>> 20b5efed0f207973831a7c04fbcca004617d11c1
+      });
+    });
+  </script>
+</body>
+</html>
